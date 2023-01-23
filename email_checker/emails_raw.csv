@@ -1,5 +1,5 @@
-Date,From,To,Subject,Body,Status,Client
-"Mon, 23 Jan 2023 09:40:06 -0300",RoboButlerBot@outlook.com,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",test sent email,"<html>
+Date,From,To,Subject,Body,Status,Client,Action
+2023-01-23 09:40:06,RoboButlerBot@outlook.com,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",test sent email,"<html>
 <head>
 <meta http-equiv=3D""Content-Type"" content=3D""text/html; charset=3Diso-8859-=
 1"">
@@ -13,8 +13,8 @@ ttom:0;} </style>
 sent email</div>
 </body>
 </html>
-",Sent,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com"
-"Mon, 23 Jan 2023 10:28:43 -0300",RoboButlerBot@outlook.com,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",sent item,"<html>
+",Sent,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",Give the client more time to answer
+2023-01-23 10:28:43,RoboButlerBot@outlook.com,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",sent item,"<html>
 <head>
 <meta http-equiv=3D""Content-Type"" content=3D""text/html; charset=3Diso-8859-=
 1"">
@@ -28,22 +28,22 @@ ttom:0;} </style>
 asdas</div>
 </body>
 </html>
-",Sent,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com"
-"Fri, 20 Jan 2023 17:25:54 -0300",no-reply@microsoft.com,robobutlerbot@outlook.com,Welcome to your new Outlook.com account,"[<email.message.Message object at 0x7f35b3fb24c0>, <email.message.Message object at 0x7f35b3fb2550>, <email.message.Message object at 0x7f35b3fb2580>, <email.message.Message object at 0x7f35b3fb25b0>, <email.message.Message object at 0x7f35b3fb2520>, <email.message.Message object at 0x7f35b3fb27f0>, <email.message.Message object at 0x7f35b3fb2670>, <email.message.Message object at 0x7f35b3fb26a0>, <email.message.Message object at 0x7f35b3fb2610>, <email.message.Message object at 0x7f35b3fb2640>, <email.message.Message object at 0x7f35b3fb26d0>, <email.message.Message object at 0x7f35b3fb2700>]",Received,no-reply@microsoft.com
-"Fri, 20 Jan 2023 20:36:33 +0000",nicolas.schcolnicov@zs.com,"robobutlerbot@outlook.com,robobutlerbot@outlook.com",test,"[<email.message.Message object at 0x7f35b3fb2760>, <email.message.Message object at 0x7f35b3fb28e0>]",Received,nicolas.schcolnicov@zs.com
-"Fri, 20 Jan 2023 20:43:58 +0000",nicolas.schcolnicov@zs.com,"robobutlerbot@outlook.com,robobutlerbot@outlook.com",test2,"[<email.message.Message object at 0x7f35b3fb2790>, <email.message.Message object at 0x7f35b3fb2a90>]",Received,nicolas.schcolnicov@zs.com
-"Fri, 20 Jan 2023 17:49:34 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,tets,"[<email.message.Message object at 0x7f35b3fb28b0>, <email.message.Message object at 0x7f35b3fb2a60>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 17:52:50 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: tets,"[<email.message.Message object at 0x7f35b3fb29d0>, <email.message.Message object at 0x7f35b3fb2a30>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:06:12 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: tets,"[<email.message.Message object at 0x7f35b3fb2c10>, <email.message.Message object at 0x7f35b3fb2bb0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:10:13 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,testetstsets,"[<email.message.Message object at 0x7f35b3fb2ca0>, <email.message.Message object at 0x7f35b3fb2940>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:12:11 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,sjsjaj,"[<email.message.Message object at 0x7f35b3fb2d30>, <email.message.Message object at 0x7f35b3fb27c0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:19:00 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,hola this is my first email,"[<email.message.Message object at 0x7f35b3fb2c40>, <email.message.Message object at 0x7f35b3fb2820>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:19:14 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f35b3fb2cd0>, <email.message.Message object at 0x7f35b3fb2850>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:21:46 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f35b3fb2d60>, <email.message.Message object at 0x7f35b3fb2ac0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:23:01 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f35b3fb2df0>, <email.message.Message object at 0x7f35b3fb2dc0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:23:42 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f35b3fb2e80>, <email.message.Message object at 0x7f35b3fb2a00>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:26:06 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f35b3fb2b80>, <email.message.Message object at 0x7f35b3fb2b50>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:28:09 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,hola,"[<email.message.Message object at 0x7f35b3fb2b20>, <email.message.Message object at 0x7f35b3fb2fa0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:28:22 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola,"[<email.message.Message object at 0x7f35b3fb2f10>, <email.message.Message object at 0x7f35b3fb2af0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:50:47 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,re,"[<email.message.Message object at 0x7f35b3fb2f70>, <email.message.Message object at 0x7f35b3e710a0>]",Received,nico.schcolnicov@gmail.com
-"Fri, 20 Jan 2023 18:51:02 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,test,"[<email.message.Message object at 0x7f35b3e710d0>, <email.message.Message object at 0x7f35b3e71250>]",Received,nico.schcolnicov@gmail.com
+",Sent,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",Give the client more time to answer
+2023-01-20 17:25:54,no-reply@microsoft.com,robobutlerbot@outlook.com,Welcome to your new Outlook.com account,"[<email.message.Message object at 0x7f372465d580>, <email.message.Message object at 0x7f372465d610>, <email.message.Message object at 0x7f372465d640>, <email.message.Message object at 0x7f372465d670>, <email.message.Message object at 0x7f372465d5e0>, <email.message.Message object at 0x7f372465d8b0>, <email.message.Message object at 0x7f372465d730>, <email.message.Message object at 0x7f372465d760>, <email.message.Message object at 0x7f372465d6d0>, <email.message.Message object at 0x7f372465d700>, <email.message.Message object at 0x7f372465d790>, <email.message.Message object at 0x7f372465d7c0>]",Received,no-reply@microsoft.com,Client is expecting an answer
+2023-01-20 20:36:33,nicolas.schcolnicov@zs.com,"robobutlerbot@outlook.com,robobutlerbot@outlook.com",test,"[<email.message.Message object at 0x7f372465d820>, <email.message.Message object at 0x7f372465d9a0>]",Received,nicolas.schcolnicov@zs.com,Client is expecting an answer
+2023-01-20 20:43:58,nicolas.schcolnicov@zs.com,"robobutlerbot@outlook.com,robobutlerbot@outlook.com",test2,"[<email.message.Message object at 0x7f372465d850>, <email.message.Message object at 0x7f372465db50>]",Received,nicolas.schcolnicov@zs.com,Client is expecting an answer
+2023-01-20 17:49:34,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,tets,"[<email.message.Message object at 0x7f372465d970>, <email.message.Message object at 0x7f372465db20>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 17:52:50,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: tets,"[<email.message.Message object at 0x7f372465da90>, <email.message.Message object at 0x7f372465daf0>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:06:12,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: tets,"[<email.message.Message object at 0x7f372465dcd0>, <email.message.Message object at 0x7f372465dc70>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:10:13,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,testetstsets,"[<email.message.Message object at 0x7f372465dd60>, <email.message.Message object at 0x7f372465da00>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:12:11,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,sjsjaj,"[<email.message.Message object at 0x7f372465dc40>, <email.message.Message object at 0x7f372465d880>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:19:00,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,hola this is my first email,"[<email.message.Message object at 0x7f372465dd00>, <email.message.Message object at 0x7f372465d8e0>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:19:14,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f372465dd90>, <email.message.Message object at 0x7f372465dbb0>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:21:46,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f372465de20>, <email.message.Message object at 0x7f372465de80>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:23:01,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f372465deb0>, <email.message.Message object at 0x7f372465d910>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:23:42,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f372465da60>, <email.message.Message object at 0x7f372465ddf0>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:26:06,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola this is my first email,"[<email.message.Message object at 0x7f372465dc10>, <email.message.Message object at 0x7f372465dfa0>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:28:09,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,hola,"[<email.message.Message object at 0x7f372465da30>, <email.message.Message object at 0x7f372465dbe0>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:28:22,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,Re: hola,"[<email.message.Message object at 0x7f3724529040>, <email.message.Message object at 0x7f3724529070>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:50:47,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,re,"[<email.message.Message object at 0x7f37245290d0>, <email.message.Message object at 0x7f3724529160>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer
+2023-01-20 18:51:02,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,test,"[<email.message.Message object at 0x7f37245291c0>, <email.message.Message object at 0x7f3724529400>]",Received,nico.schcolnicov@gmail.com,Client is expecting an answer

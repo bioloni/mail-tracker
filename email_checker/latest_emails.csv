@@ -1,6 +1,6 @@
-Client,Date,From,To,Subject,Body,Status
-nico.schcolnicov@gmail.com,"Fri, 20 Jan 2023 18:51:02 -0300",nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,test,"[<email.message.Message object at 0x7f35b3e710d0>, <email.message.Message object at 0x7f35b3e71250>]",Received
-"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com","Mon, 23 Jan 2023 10:28:43 -0300",RoboButlerBot@outlook.com,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",sent item,"<html>
+Client,Date,From,To,Subject,Body,Status,Action
+nico.schcolnicov@gmail.com,2023-01-20 18:51:02,nico.schcolnicov@gmail.com,robobutlerbot@outlook.com,test,"[<email.message.Message object at 0x7f37245291c0>, <email.message.Message object at 0x7f3724529400>]",Received,Client is expecting an answer
+"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",2023-01-23 10:28:43,RoboButlerBot@outlook.com,"nico.schcolnicov@gmail.com,nico.schcolnicov@gmail.com",sent item,"<html>
 <head>
 <meta http-equiv=3D""Content-Type"" content=3D""text/html; charset=3Diso-8859-=
 1"">
@@ -14,6 +14,6 @@ ttom:0;} </style>
 asdas</div>
 </body>
 </html>
-",Sent
-nicolas.schcolnicov@zs.com,"Fri, 20 Jan 2023 20:43:58 +0000",nicolas.schcolnicov@zs.com,"robobutlerbot@outlook.com,robobutlerbot@outlook.com",test2,"[<email.message.Message object at 0x7f35b3fb2790>, <email.message.Message object at 0x7f35b3fb2a90>]",Received
-no-reply@microsoft.com,"Fri, 20 Jan 2023 17:25:54 -0300",no-reply@microsoft.com,robobutlerbot@outlook.com,Welcome to your new Outlook.com account,"[<email.message.Message object at 0x7f35b3fb24c0>, <email.message.Message object at 0x7f35b3fb2550>, <email.message.Message object at 0x7f35b3fb2580>, <email.message.Message object at 0x7f35b3fb25b0>, <email.message.Message object at 0x7f35b3fb2520>, <email.message.Message object at 0x7f35b3fb27f0>, <email.message.Message object at 0x7f35b3fb2670>, <email.message.Message object at 0x7f35b3fb26a0>, <email.message.Message object at 0x7f35b3fb2610>, <email.message.Message object at 0x7f35b3fb2640>, <email.message.Message object at 0x7f35b3fb26d0>, <email.message.Message object at 0x7f35b3fb2700>]",Received
+",Sent,Give the client more time to answer
+nicolas.schcolnicov@zs.com,2023-01-20 20:43:58,nicolas.schcolnicov@zs.com,"robobutlerbot@outlook.com,robobutlerbot@outlook.com",test2,"[<email.message.Message object at 0x7f372465d850>, <email.message.Message object at 0x7f372465db50>]",Received,Client is expecting an answer
+no-reply@microsoft.com,2023-01-20 17:25:54,no-reply@microsoft.com,robobutlerbot@outlook.com,Welcome to your new Outlook.com account,"[<email.message.Message object at 0x7f372465d580>, <email.message.Message object at 0x7f372465d610>, <email.message.Message object at 0x7f372465d640>, <email.message.Message object at 0x7f372465d670>, <email.message.Message object at 0x7f372465d5e0>, <email.message.Message object at 0x7f372465d8b0>, <email.message.Message object at 0x7f372465d730>, <email.message.Message object at 0x7f372465d760>, <email.message.Message object at 0x7f372465d6d0>, <email.message.Message object at 0x7f372465d700>, <email.message.Message object at 0x7f372465d790>, <email.message.Message object at 0x7f372465d7c0>]",Received,Client is expecting an answer

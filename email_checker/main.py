@@ -4,7 +4,11 @@ import json
 import email
 import imaplib
 import re
+from datetime import timedelta, datetime
 
+
+
+today = datetime.today()
 #Define helper functions
 
 #Email extractor
@@ -17,7 +21,14 @@ def col_sel(x):
     if x['From'] == credentials["username"]: return x['To']
     else: return x['From']
 
-
+def action_gen(x):
+    grace_period=3
+    date_diff=(today - x['Date']).days
+    if (x['Status'] == "Received") and (date_diff >= grace_period): return "URGENT Client is expecting an answer"
+    elif (x['Status'] == "Received") and (date_diff < grace_period): return "Client is expecting an answer"
+    elif (x['Status'] == "Sent") and (date_diff >= grace_period): return "Follow up on the email you sent"
+    elif (x['Status'] == "Sent") and (date_diff < grace_period): return "Give the client more time to answer"
+    else: return "Error"
 
 
 
@@ -68,14 +79,21 @@ for email_id in inbox_email_ids:
 inbox_df = pd.DataFrame(inbox_emails_list, columns=["Date", "From", "To", "Subject","Body", "Status"])
 
 # Append the dataframe to the main dataframe
-emails_df = sent_df.append(inbox_df)
+emails_df = pd.concat([sent_df,inbox_df],ignore_index=True)
 
+#Format date column
+emails_df['Date'] = emails_df['Date'].apply(lambda x: datetime.strptime(x, "%a, %d %b %Y %H:%M:%S %z"))
+emails_df['Date'] = emails_df['Date'].apply(lambda x: x.replace(tzinfo=None))
+print(emails_df)
 #Extract email from column
 emails_df['From']=emails_df['From'].apply(lambda x: find_email(x))
 emails_df['To']=emails_df['To'].apply(lambda x: find_email(x))
 
 #Generate client column
 emails_df['Client']=emails_df.apply(lambda x: col_sel(x),axis=1)
+
+#Generate action column
+emails_df['Action']=emails_df.apply(lambda x: action_gen(x),axis=1)
 
 #Download the raw dataframe
 emails_df.to_csv("emails_raw.csv", index=False)
