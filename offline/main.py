@@ -31,7 +31,6 @@ date_format_1 = '%H:%M %p'
 date_format_2 = '%a %I:%M %p'
 date_format_3 = '%a %m/%d'
 date_format_4 = '%m/%d/%Y'
-date_format_5 = '%a %I:%M %p'
 # Get today's date
 today = datetime.now()
 # Get current day of the week
@@ -94,21 +93,9 @@ def convert_date_format(date_string):
         return datetime.strptime(date_string, '%a %m/%d/%Y').strftime('%m/%d/%Y')
     elif check_date_format(date_string,date_format_4):
         return date_string
-    elif check_date_format(date_string,date_format_5):
-        # Convert the date string to a datetime object
-        date_object = datetime.strptime(date_string, date_format)
-        # Get the day of the week from the date object
-        date_weekday = date_object.weekday()
-        # Calculate the difference in days between the current day and the day of the week from the date object
-        diff = date_weekday - current_weekday
-        # Use the timedelta to add the difference in days to the current date
-        converted_date = now + timedelta(days=diff)
-        # Format the date as '%m/%d/%Y'
-        converted_date_string = converted_date.strftime('%m/%d/%Y')
-        return converted_date_string
     else:
         print("Odd date {}".format(date_string))
-        return pd.NaT
+        return "01/01/1900"
 
 #Function to submit and process the input files
 def submit_files():
@@ -138,13 +125,16 @@ def submit_files():
     # Concatenate the dataframes and sort by date
     global master
     master = pd.concat([inbox, sent], ignore_index=True)
-    #Parse dates   
+    #Parse dates
+    master['Date_raw']=master['Date']
     master['Date']=master['Date'].apply(lambda x: convert_date_format(x))
     master['Date'] = pd.to_datetime(master['Date'])
+    
+    
 
     # Group by "Client" and keep only the latest row
-    master = master.drop_duplicates(subset='Client', keep='last')
-    master = master.dropna()
+    master = master.sort_values(by='Date', ascending=False).groupby('Client').first().reset_index()
+    # master = master.dropna()
     
 
 
@@ -158,8 +148,14 @@ def submit_files():
     # Create a new column "Priority" based on the custom_sort function
     master['Priority'] = master.apply(lambda x: custom_sort(x), axis=1)
     # Sort the dataframe by the Priority column in descending order
-    master = master.sort_values(by=['Priority'], ascending=False)
-    master = master.reset_index()
+    master = master.sort_values(by=["Priority", "Date"], ascending=[False, True])
+    master = master.reset_index(drop=True)
+    master['Date'] = master['Date'].dt.strftime(date_format_4)
+
+    #Rearrange columns
+    cols = ['Date','Date_raw','Client','Subject','Status','Priority','Action']
+    master = master[cols]
+    master.to_csv("master_raw.csv")
     # Create a new Excel file
     wb = Workbook()
     ws = wb.active
@@ -180,7 +176,6 @@ def submit_files():
 
     for i, row in master.iterrows():
         for j, cell in enumerate(row):
-            print("Row:{},Column:{},Value:{}".format(i,j,cell))
             c = ws.cell(row=i+1, column=j+1)
             c.value = cell
             c.border = borders
