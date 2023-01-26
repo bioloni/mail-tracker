@@ -195,17 +195,16 @@ def submit_files():
     # Write the dataframe to the Excel file
 
     for i, row in master.iterrows():
-        if i != 0:
-            for j, cell in enumerate(row):
-                c = ws.cell(row=i+1, column=j+1)
-                c.value = cell
-                c.border = borders
-                if row.Priority == 3:
-                    c.fill = red_fill
-                elif row.Priority == 2:
-                    c.fill = yellow_fill
-                elif row.Priority == 1:
-                    c.fill = green_fill
+        for j, cell in enumerate(row):
+            c = ws.cell(row=i+2, column=j+1)
+            c.value = cell
+            c.border = borders
+            if row.Priority == 3:
+                c.fill = red_fill
+            elif row.Priority == 2:
+                c.fill = yellow_fill
+            elif row.Priority == 1:
+                c.fill = green_fill
 
     # Format the headers
     for col_num, value in enumerate(master.columns.values):
