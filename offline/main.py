@@ -1,6 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
-from tkinter import filedialog
+from tkinter import filedialog, messagebox, ttk
 import pandas as pd
 from datetime import datetime, date, timedelta
 import os
@@ -25,6 +24,9 @@ sent_input = tk.Entry(root)
 sent_input.grid(row=1, column=1)
 sent_button = tk.Button(root, text="Upload", command=lambda: select_file(sent_input) and check_input_fields())
 sent_button.grid(row=1, column=2)
+
+#Build dictionary with only relevant subjects
+subjects=["RevIQ Configuration Call", "Engagement Assistance Needed", "Mandatory training needed before RevIQ Configuration Call", "Reminder - Engagement Assistance Needed", "ZS RevIQ", "RevIQ Activation Date Change", "RevIQ Configuration Call Recap", "We are waiting for you!", "We missed you on the call!", "RevIQ Go-Live Tomorrow", "Your property is now live on RevIQ", "Transition to New RevIQ Coach"]
 
 # Parse dates
 date_format_1 = '%H:%M %p'
@@ -73,6 +75,12 @@ def check_date_format(date_string, date_format):
         return True
     except:
         return False
+
+def update_steps(row):
+    for subject in step_dict.keys():
+        if subject in row['Subject'].values:
+            row[step_dict[subject]] = 1
+    return row
 
 # Function to convert date formats
 def convert_date_format(date_string):
@@ -130,13 +138,23 @@ def submit_files():
     master['Date']=master['Date'].apply(lambda x: convert_date_format(x))
     master['Date'] = pd.to_datetime(master['Date'])
     
-    
+    #Checkpoint df
+    master_raw = master
+
+    # #Keep only the rows that have a relevant subject
+    # master = master[master['Subject'].isin(list(step_dict.keys()))] #Keep only mails with relevant subjects (subjects are stored as dictionary keys)
+    # #Add new columns to df one for each subjects step value
+    # master.reindex(columns=list(step_dict.values()), fill_value=0)
+    # # Group by "Client" and populate the new columns depending on the emails available for each client
+    # master = master.groupby("Client").apply(update_steps)
+    # # master = master.dropna()
+
+    #Convert to string and filter
+    master['Subject'] = master['Subject'].astype(str)
+    master = master[master['Subject'].apply(lambda x: any(substring in x for substring in subjects))]
 
     # Group by "Client" and keep only the latest row
     master = master.sort_values(by='Date', ascending=False).groupby('Client').first().reset_index()
-    # master = master.dropna()
-    
-
 
     # Add the status column
     grace_period = 3
@@ -155,6 +173,8 @@ def submit_files():
     #Rearrange columns
     cols = ['Date','Date_raw','Client','Subject','Status','Priority','Action']
     master = master[cols]
+
+    #Save raw file
     master.to_csv("master_raw.csv")
     # Create a new Excel file
     wb = Workbook()
@@ -175,16 +195,17 @@ def submit_files():
     # Write the dataframe to the Excel file
 
     for i, row in master.iterrows():
-        for j, cell in enumerate(row):
-            c = ws.cell(row=i+1, column=j+1)
-            c.value = cell
-            c.border = borders
-            if row.Priority == 3:
-                c.fill = red_fill
-            elif row.Priority == 2:
-                c.fill = yellow_fill
-            elif row.Priority == 1:
-                c.fill = green_fill
+        if i != 0:
+            for j, cell in enumerate(row):
+                c = ws.cell(row=i+1, column=j+1)
+                c.value = cell
+                c.border = borders
+                if row.Priority == 3:
+                    c.fill = red_fill
+                elif row.Priority == 2:
+                    c.fill = yellow_fill
+                elif row.Priority == 1:
+                    c.fill = green_fill
 
     # Format the headers
     for col_num, value in enumerate(master.columns.values):
@@ -203,58 +224,20 @@ def submit_files():
     # Create the table
     display_table(master)
 
-    
-
-
-
-#Function to filter the table
-def filter_table():
-    column = filter_column.get()
-    value = filter_value.get()
-    filtered_df = master[master[column] == value]
-    display_table(filtered_df)
-
-#Function to sort the table
-def sort_table(column):
-    master.sort_values(by=column, inplace=True)
-    display_table(master)
-
-#Function to search the table
-def search_table():
-    column = search_column.get()
-    value = search_value.get()
-    searched_df = master[master[column].str.contains(value, na=False)]
-    display_table(searched_df)
 
 #Function to display the table     #Create the table sorting functionality
 def display_table(dataframe):
     # Create the table
+    
+    messagebox.showinfo("Information", "Summary table was created in the same folder where you executed this script")
     columns = dataframe.columns
     table = ttk.Treeview(root, columns=columns, show='headings')
     for i in range(0,len(columns)):
         table.heading(i, text=columns[i])
         table.column(i, width=100)
-        table.heading(i, text=columns[i], command=lambda c=columns[i]: sort_table(c))
     for i, row in dataframe.iterrows():
         table.insert('', 'end', values=list(row))
         table.grid(row=4, column=0, columnspan=3)
-
-
-        
-
-#Create the filter button, label and entry fields
-filter_label = tk.Label(root, text="Filter by column:")
-filter_column = tk.Entry(root)
-filter_value_label = tk.Label(root, text="Filter by value:")
-filter_value = tk.Entry(root)
-filter_button = tk.Button(root, text="Filter", command=filter_table)
-
-#Create the search button, label, and entry fields
-search_label = tk.Label(root, text="Search by column:")
-search_column = tk.Entry(root)
-search_value_label = tk.Label(root, text="Search by value:")
-search_value = tk.Entry(root)
-search_button = tk.Button(root, text="Search", command=search_table)
 
 #Create submit button
 submit_button = tk.Button(root, text="Submit", command=submit_files, state=tk.DISABLED)
